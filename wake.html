@@ -51,11 +51,9 @@
 					hoursInput += 12;
 				}
 
-debugger;
 				let now = new Date();
 				let wakeTimeMs = new Date().setHours(hoursInput, minutesInput, 0, 0);
 				if (wakeTimeMs < now.getTime()) {
-					debugger;
 					let tomrrowsDate = new Date(wakeTimeMs).getDate() + 1;
 					wakeTimeMs = new Date(new Date().setDate(tomrrowsDate)).setHours(hoursInput, minutesInput, 0, 0);
 				}
@@ -64,7 +62,6 @@ debugger;
 				document.getElementById('time-picker').style.display = 'none';
 				
 				let timer = setInterval(function() {
-debugger;
 					let distance = wakeTimeMs - new Date().getTime();
 
 					// Time calculations for days, hours, minutes and seconds
